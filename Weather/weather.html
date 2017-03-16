@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>weather</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+  <body>
+  <div class="container">
+    <div class="row">
+    <div class="col-xs-3"></div>
+      <div class="col-xs-6 verticalCenter">
+        <div class="panel panel-info">
+          <div class="panel-heading text-center">Enter the name of the city</div>
+          <div class="panel-body">
+          <form role="search" id="my-form">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="London" autofocus="autofocus" id="input-city">
+              </div>
+              <button type="button" class="btn btn-info text-center center-block" onclick="InputCheck();">Continue</button>
+              </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-3"></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3"></div>
+       <div class="col-xs-6 current" >
+       <h1 class="h1current-weather">Current weather</h1>
+        <table class="table table-striped" id="current-weather">
+          <tr><td>City</td><td><span id="city"></span></td></tr>
+          <tr><td>Cloudiness</td><td><span id="cloudiness"></span> %</td></tr>
+          <tr><td>Temperature</td><td><span id="temperature"></span> &#176;C</td></tr>
+          <tr><td>Humidity</td><td><span id="humidity"></span> %</td></tr>
+          <tr><td>Wind</td><td><span id="wind"></span> m/s</td></tr>
+          <tr><td>Pressure</td><td><span id="pressure"></span> mmHg</td></tr>
+        </table>
+      </div>
+     
+      <div class="col-xs-3">
+        <button type="button" class="btn btn-info text-center center-block scroll-top-input" onclick="ScrollTop();">↑ Enter the name of the city </button>
+        <button type="button" class="btn btn-info text-center center-block scroll-down-5Days" onclick="ScrollDown();">↓ 5 day weather forecast</button>
+      </div>
+      </div>
+     
+	 
+	 <div class="row">
+	 <button type="button" class="btn btn-info text-center center-block scroll-top-long alert="right" onclick="ScrollTop();">↑ Enter the name of the city </button>
+   <button type="button" class="btn btn-info text-center center-block scroll-current" onclick="ScrollTopCurrent();">↑ Current weather</button><br />
+	 <h1 class="h1Weather5Days">5 day weather forecast </h1>
+      <div class="weather5Days">
+	  
+        <ul id="inner">
+        <li>
+			     <table class="table table-striped">
+            <tr><td>Date</td><td><span id="date0"></span> </td></tr>
+            <tr><td>Cloudiness</td><td><span id="cloudiness0"></span> %</td></tr>
+            <tr><td>Temperature</td><td><span id="temperature0"></span> &#176;C</td></tr>
+            <tr><td>Humidity</td><td><span id="humidity0"></span> %</td></tr>
+            <tr><td>Wind</td><td><span id="wind0"></span> m/s</td></tr>
+            <tr><td>Pressure</td><td><span id="pressure0"></span> mmHg</td></tr>
+			     </table>
+		    </li>
+        <li>
+           <table class="table table-striped">
+            <tr><td>Date</td><td><span id="date1"></span> </td></tr>
+            <tr><td>Cloudiness</td><td><span id="cloudiness1"></span> %</td></tr>
+            <tr><td>Temperature</td><td><span id="temperature1"></span> &#176;C</td></tr>
+            <tr><td>Humidity</td><td><span id="humidity1"></span> %</td></tr>
+            <tr><td>Wind</td><td><span id="wind1"></span> m/s</td></tr>
+            <tr><td>Pressure</td><td><span id="pressure1"></span> mmHg</td></tr>
+           </table>
+        </li>
+        <li>
+           <table class="table table-striped">
+            <tr><td>Date</td><td><span id="date2"></span> </td></tr>
+            <tr><td>Cloudiness</td><td><span id="cloudiness2"></span> %</td></tr>
+            <tr><td>Temperature</td><td><span id="temperature2"></span> &#176;C</td></tr>
+            <tr><td>Humidity</td><td><span id="humidity2"></span> %</td></tr>
+            <tr><td>Wind</td><td><span id="wind2"></span> m/s</td></tr>
+            <tr><td>Pressure</td><td><span id="pressure2"></span> mmHg</td></tr>
+           </table>
+        </li>
+        <li>
+           <table class="table table-striped">
+            <tr><td>Date</td><td><span id="date3"></span> </td></tr>
+            <tr><td>Cloudiness</td><td><span id="cloudiness3"></span> %</td></tr>
+            <tr><td>Temperature</td><td><span id="temperature3"></span> &#176;C</td></tr>
+            <tr><td>Humidity</td><td><span id="humidity3"></span> %</td></tr>
+            <tr><td>Wind</td><td><span id="wind3"></span> m/s</td></tr>
+            <tr><td>Pressure</td><td><span id="pressure3"></span> mmHg</td></tr>
+           </table>
+        </li>
+        <li>
+           <table class="table table-striped">
+            <tr><td>Date</td><td><span id="date4"></span> </td></tr>
+            <tr><td>Cloudiness</td><td><span id="cloudiness4"></span> %</td></tr>
+            <tr><td>Temperature</td><td><span id="temperature4"></span> &#176;C</td></tr>
+            <tr><td>Humidity</td><td><span id="humidity4"></span> %</td></tr>
+            <tr><td>Wind</td><td><span id="wind4"></span> m/s</td></tr>
+            <tr><td>Pressure</td><td><span id="pressure4"></span> mmHg</td></tr>
+           </table>
+        </li>
+		  
+        </ul>
+      </div>
+      <div class="col-xs-3">
+      </div>
+      </div>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

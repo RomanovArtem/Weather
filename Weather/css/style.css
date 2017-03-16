@@ -1,0 +1,71 @@
+/*.row * {
+    min-height: 50px;
+    border: 1px solid #0088cc;
+    background: #eee;
+}﻿ */
+html { 
+	overflow-x: hidden; 
+	overflow-y: hidden;
+}
+body {
+	overflow-x: hidden; 
+	overflow-y: hidden;
+}
+h1 {
+	text-align: center;
+	
+}
+.verticalCenter {
+    margin-top: 40vh;
+}
+.current {
+	margin-top: 23vh;
+}
+.h1current-weather {
+	margin-top: 26vh;
+	display: none;
+}
+#current-weather {
+	display: none;
+	margin-bottom: 500px;
+}
+#city {
+	font: bold 16px arial;
+}
+.weather5Days {
+	width: auto;
+	overflow-x: scroll; 
+	display: none;
+	margin-bottom: 27vh;
+}
+.weather5Days ul {
+	width: 140%;
+	white-space: nowrap;
+}
+.weather5Days li {
+	width: 300px;
+	float: left;
+	list-style-type: none;
+	margin-left: 10px;
+}
+.h1Weather5Days {
+	
+	display: none;
+}
+.scroll-top-input {
+	margin-top: 55vh;
+	display: none;
+}
+.scroll-down-5Days {
+	margin-top: 14vh;
+	display: none;
+}
+.scroll-top-long {
+	float: right;
+	display: none;
+}
+.scroll-current {
+	margin-right: 20px;
+	float: right;
+	display: none;
+}
